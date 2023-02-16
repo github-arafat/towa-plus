@@ -1,0 +1,281 @@
+/* ============== Google Font ============*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+:root{
+    --background-color-1: #fff;
+    --background-color-2: #f8fafb;
+    --text-color-p: #AAAAAA;
+    --text-color-h: #000;
+    --text-color-a: #fff;
+    --box-color: #1469E1;
+    --box-color-1: #FF0000;
+    --font-size-xs: 10px;
+    --font-size-s: 12px;
+    --font-size-m: 15px;
+    --font-size-l: 18px;
+    --font-size-xl: 20px;
+    --font-size-xxxl: 25px;
+    --font-size-vl: 45px;
+    --box-padding: 10px 20px;
+}
+/* ====================== Header Section =====================*/
+.container{
+    padding: 15px 5%;
+}
+#herader{
+    width: 100%;
+    height: auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--text-color-h);
+    font-size: var(--font-size-m);
+    margin: 1.2rem;
+    font-weight: 500;
+    position: relative;
+}
+nav ul li a::after{
+    content: "";
+    width: 50%;
+    height: 2px;
+    background: var(--box-color-1);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.5s;
+}
+nav ul li a:hover{
+    color: var(--box-color-1);
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+nav button{
+    margin-left: 2.5rem;
+    padding: var(--box-padding);
+    background: var(--box-color);
+    border-radius: 5px;
+    border: solid var(--box-color);
+    color: var(--text-color-a);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header-text{
+    flex-basis: 45%;
+}
+.header-img{
+    flex-basis: 45%;
+}
+.header-img figure img{
+    width: 100%;
+}
+.header-text h1{
+    margin-bottom: 1.5rem;
+    font-size: var(--font-size-vl);
+    line-height: 3rem;
+}
+.header-text p{
+    font-size: var(--font-size-m);
+    color: var(--text-color-p);
+    word-spacing: 2px;
+    line-height: 1.5rem;
+}
+.header-text a{
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 2.5rem;
+    padding: var(--box-padding);
+    background: var(--box-color);
+    color: var(--text-color-a);
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+/* =========================== Explore Section ======================== */
+#explore{
+    width: 100%;
+    background: var(--background-color-2);
+}
+.explore-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem ;
+    margin-bottom: .5rem;
+}
+.explore-title h1{
+    font-size: var(--font-size-l);
+}
+.explore-title i{
+    font-size: var(--font-size-xxxl);
+    transition: 0.3s;
+}
+.explore-title i:hover{
+    color: var(--box-color);
+}
+.explore-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 15px;
+    padding: 1.5rem 3rem;
+}
+.explore-box-content{
+    padding: 1.2rem 1rem;
+    background: var(--background-color-1);
+    border-radius: 15px;
+    flex-basis: 200px;
+    font-size: var(--font-size-s);
+    transition: ease 0.5s;
+}
+.explore-box-content i{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    background: var(--background-color-2);
+    padding: var(--font-size-s);
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+.explore-box-content h3{
+    font-size: var(--font-size-m);
+    margin-bottom: .5rem;
+}
+.explore-box-content P{
+    font-size: var(--font-size-s);
+    font-weight: 500;
+    color: var(--text-color-p);
+}
+.explore-box-content:hover{
+    background: var(--box-color);
+}
+.explore-box-content:hover h3{
+    color: var(--text-color-a);
+}
+.about-explore{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+    flex-wrap: wrap;
+}
+.about-explore-img{
+    flex-basis: 55%;
+}
+.about-explore-box{
+    flex-basis: 40%;
+}
+.about-explore img{
+    display: inline-block;
+    width: 100%;
+    border: 5px;
+    border-radius: 100px 0;
+}
+.about-explore-box-row{
+    display: flex;
+    padding: 2rem 1.5rem;
+    margin: 1.5rem 0;
+    background: var(--background-color-1);
+    border-radius: 8px;
+    flex-direction: column;
+    transition: ease 0.5s;
+}
+
+.about-explore-box-row i{
+    font-size: 30px;
+}
+.about-explore-box-text h3{
+    margin: .5rem 0;
+    font-size: var(--font-size-xl);
+}
+.about-explore-box-text p{
+    font-size: var(--font-size-m);
+    word-spacing: 2px;
+    color: var(--text-color-p);
+}
+
+.about-explore-box-row:hover{
+    background: var(--box-color);
+    color: var(--text-color-a);
+    box-shadow: var(--box-color) 0px 25px 20px -20px;
+}
+/* =========================== Team Section ====================== */
+#team-section{
+    background: var(--background-color-1);
+    padding: 3rem 0;
+}
+.team-row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 15px;
+    align-items: center;
+}
+.team-row-2 img{
+    width: 100%;
+}
+.team-row-1 h2{
+    font-size: var(--font-size-xxxl);
+    margin-bottom: .8rem;
+}
+.team-row-1 p{
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    line-height: 1.7rem;
+    word-spacing: 2px;
+    color: var(--text-color-p);
+}
+.team-row-1 a{
+    display: inline-block;
+    margin-top: 2rem;
+    text-decoration: none;
+    padding: var(--box-padding);
+    background: var(--box-color);
+    color: var(--text-color-a);
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+/* ====================== Article Section =================== */
+
+
+
+
+
+.article-row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 15px;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.article-row img{
+    display: inline-block;
+    width: 100%;
+}
+.article-row-content{
+    background: var(--background-color-1);
+}
